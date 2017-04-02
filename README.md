@@ -1,2 +1,2 @@
-# unicorn-hr
+# Unicorn-HR
 HR management system.
