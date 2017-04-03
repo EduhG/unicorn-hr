@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/sh -e
 
 APP_NAME=$1
 
@@ -33,7 +33,7 @@ git push heroku $CIRCLE_SHA1:refs/heads/master
 
 # run database migrations if needed and restart background workers once finished
 if test $MIGRATION_CHANGES -gt 0; then
-    if [ "$CREATE_DB" = "1" ] && [[ "$DATABASE_TABLES" = 0 ]]; then
+    if [ "$CREATE_DB" = "1" ] && [ "$DATABASE_TABLES" = 0 ]; then
         heroku run python manage.py init_app
     elif [ "$CREATE_DB" = "1" ]; then
         heroku run python manage.py db upgrade
