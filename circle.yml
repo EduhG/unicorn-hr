@@ -2,10 +2,10 @@ deployment:
   production:
     branch: master
     commands:
-      - ./script/heroku_deploy.sh <PRODUCTION_HEROKU_APP>:
+      - ./script/heroku_deploy.sh unicorn-hr:
           timeout: 300
   staging:
     branch: staging
     commands:
-      - ./script/heroku_deploy.sh <STAGING_HEROKU_APP>:
+      - ./script/heroku_deploy.sh unicorn-hr-staging:
           timeout: 300
