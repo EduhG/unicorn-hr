@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 APP_NAME=$1
 
